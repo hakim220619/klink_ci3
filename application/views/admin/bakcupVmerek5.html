@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en" class="no-focus"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+        <title>Add Merek</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="VR">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="<?php echo base_url().'assets/images/favicon.png'?>">
+
+        <!-- END Icons -->
+        <!-- bootstrap -->
+        <link href="<?php echo base_url();?>assets/front/vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+           
+        <!-- bootstrap fileupload -->
+        <link href="<?php echo base_url();?>assets/front/vendors/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet">
+
+        <!-- bootstrap datepicker -->
+        <link href="<?php echo base_url();?>assets/front/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+        <!-- Stylesheets -->
+        <!-- Codebase framework -->
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/dropify.min.css'?>">
+        <link rel="stylesheet" id="css-main" href="<?php echo base_url().'assets/css/codebase.min.css'?>">
+        
+
+        <link rel="stylesheet" href="<?php echo base_url().'assets/css/jquery-ui.css'?>">
+
+   
+
+
+    </head>
+    <body>
+        <!-- Page Container -->
+       
+        <div id="page-container" class="sidebar-o side-scroll main-content-boxed side-trans-enabled page-header-fixed">
+            
+
+            <!-- Sidebar -->
+         
+            <nav id="sidebar">
+                <!-- Sidebar Scroll Container -->
+                <div id="sidebar-scroll">
+                    <!-- Sidebar Content -->
+                    <div class="sidebar-content">
+                        <!-- Side Header -->
+                        <div class="content-header content-header-fullrow px-15">
+                            <!-- Mini Mode -->
+                            <div class="content-header-section sidebar-mini-visible-b">
+                                <!-- Logo -->
+                                <span class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
+                                    <span class="text-dual-primary-dark">c</span><span class="text-primary">b</span>
+                                </span>
+                                <!-- END Logo -->
+                            </div>
+                            <!-- END Mini Mode -->
+
+                            <!-- Normal Mode -->
+                            <div class="content-header-section text-center align-parent sidebar-mini-hidden">
+                                <!-- Close Sidebar, Visible only on mobile screens -->
+                                <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
+                                <button type="button" class="btn btn-circle btn-dual-secondary d-lg-none align-v-r" data-toggle="layout" data-action="sidebar_close">
+                                    <i class="fa fa-times text-danger"></i>
+                                </button>
+                                <!-- END Close Sidebar -->
+
+                                <!-- Logo -->
+                                <div class="content-header-item">
+                                    <a class="link-effect font-w700" href="<?php echo base_url().'admin/dashboard'?>">
+                                        <i class="text-primary"></i>
+                                        <span class="font-size-xl text-dual-primary-dark">VR</span><span class="font-size-xl text-success">DEVELOPMENT</span>
+                                    </a>
+                                </div>
+                                <!-- END Logo -->
+                            </div>
+                            <!-- END Normal Mode -->
+                        </div>
+                        <!-- END Side Header -->
+
+                        <!-- Side User -->
+                        <div class="content-side content-side-full content-side-user px-10 align-parent">
+                            <!-- Visible only in mini mode -->
+                            <div class="sidebar-mini-visible-b align-v animated fadeIn">
+                                <img class="img-avatar img-avatar32" src="<?php echo base_url().'assets/images/user_blank.png'?>" alt="">
+                            </div>
+                            <!-- END Visible only in mini mode -->
+
+                            <!-- Visible only in normal mode -->
+                            <div class="sidebar-mini-hidden-b text-center">
+                                <?php 
+                                    error_reporting(0);
+                                    $idadmin=$this->session->userdata('idadmin');
+                                    $query=$this->db->query("SELECT * FROM pengguna WHERE pengguna_id='$idadmin'");
+                                    $data=$query->row_array();
+                                ?>
+                                <?php if($this->session->userdata('akses')=='3'):?>
+                                    <a class="img-link" href="<?php echo base_url().'assets/images/user_blank.png'?>">
+                                        <img class="img-avatar" src="<?php echo base_url().'assets/images/user_blank.png'?>" alt="">
+                                    </a>
+                                <?php else:?>
+                                    <a class="img-link" href="#">
+                                        <img class="img-avatar" src="<?php echo base_url().'assets/images/'.$data['pengguna_photo'];?>" alt="">
+                                    </a>
+                                <?php endif;?>
+                                <ul class="list-inline mt-10">
+                                    <li class="list-inline-item">
+                                        <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="#"><?php echo $this->session->userdata('nama');?></a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <!-- END Visible only in normal mode -->
+                        </div>
+                        <!-- END Side User -->
+
+                        <!-- Side Navigation -->
+                         <?php $this->load->view('admin/sidebar');?>
+                        <!-- END Side Navigation -->
+                    </div>
+                    <!-- Sidebar Content -->
+                </div>
+                <!-- END Sidebar Scroll Container -->
+            </nav>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <?php echo $this->load->view('admin/header.php');?>
+            <!-- END Header -->
+
+            <?php 
+                $b=$vmerek->row_array();
+            ?>
+
+           
+            <!-- Main Container -->
+            <main id="main-container">
+             <!-- Page Content -->
+            <div class="content"> <!-- div class conten -->
+            
+            <form action="<?php echo base_url().'admin/merek/update_merek5'?>" method="post" enctype="multipart/form-data" class="form-style">
+
+<!----------------------------------------- FORM SECTION 1 ------------------------------------------->
+
+              <div class="block-header block-header-default">
+                 <h2 class="block-title" style="text-align:left;">IDENTITAS KUASA</h2>
+                 <h2 class="block-title" style="text-align:right;"><b>(Form Isian 4 - 5)</b></h2>
+             </div>
+            
+            <div class="block"> <!-- div class block -->
+            
+            <div class="col-md-12"> <!-- div col-md-12 -->
+            
+
+            
+           
+            <div class="card-body"> <!-- div card-body -->
+                <div class="row"> <!-- div row -->
+                    
+                     <div class="col-md-6 pr-md-5">
+                                               
+                            <div class="form-group">
+                                        <label class="control-label">Tipe Merek :</label>
+
+                                        <div>
+                                            <div class="custom-control custom-radio"><!-- custom-control-inline -->
+                                                <input class="custom-control-input" type="radio" name="typemerek" id="merekkata1" value="Merek Kata" <?php echo $b['merek_type'] == 'Merek Kata' ? "checked" : ""; ?>>
+                                                <label class="custom-control-label" for="merekkata1">Merek kata</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="custom-control custom-radio"><!-- custom-control-inline -->
+                                                <input class="custom-control-input" type="radio" name="typemerek" id="lukisan1" value="Merek lukisan/logo" <?php echo $b['merek_type'] == 'Merek lukisan/logo' ? "checked" : ""; ?>>
+                                                <label class="custom-control-label" for="lukisan1">Merek lukisan/logo</label>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="custom-control custom-radio"><!-- custom-control-inline -->
+                                                <input class="custom-control-input" type="radio" name="typemerek" id="melugo1" value="Merek kata + lukisan/logo" <?php echo $b['merek_type'] == 'Merek kata + lukisan/logo' ? "checked" : ""; ?>>
+                                                <label class="custom-control-label" for="melugo1">Merek kata + lukisan/logo</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="custom-control custom-radio"><!-- custom-control-inline -->
+                                                <input class="custom-control-input" type="radio" name="typemerek" id="metidi1" value="Merek tiga dimensi" <?php echo $b['merek_type'] == 'Merek tiga dimensi' ? "checked" : ""; ?>>
+                                                <label class="custom-control-label" for="metidi1">Merek tiga dimensi</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="custom-control custom-radio"><!-- custom-control-inline -->
+                                                <input class="custom-control-input" type="radio" name="typemerek" id="mersu1" value="Merek suara" <?php echo $b['merek_type'] == 'Merek suara' ? "checked" : ""; ?>>
+                                                <label class="custom-control-label" for="mersu1">Merek suara</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="custom-control custom-radio"><!-- custom-control-inline -->
+                                            <input class="custom-control-input" type="radio" name="typemerek" id="merholo1" value="Merek hologram" <?php echo $b['merek_type'] == 'Merek hologram' ? "checked" : ""; ?>>
+                                                <label class="custom-control-label" for="merholo1">Merek hologram</label>
+                                            </div>
+                                       </div>
+                           </div>
+
+                          <div class="form-group">
+                            <label class="control-label">Merek Terjemahan:</label><br>
+                            <small class="text-note"><i class="fa fa-info-circle"></i> Terjemahan jika merek menggunakan istilah asing (maksimal 300 karakter).</small>
+                            <textarea name="rekter" id="rekter" class="form-control" rows="4" maxlength="300"><?php echo $b['merek_terjemahan']; ?></textarea>
+                          </div> 
+
+                          <div class="form-group">
+                            <label class="control-label">Transliterasi/pengucapan:</label><br>
+                            <small class="text-note"><i class="fa fa-info-circle"></i> jika merek menggunakan karakter huruf non-latin (maksimal 300 karakter).</small>
+                            <textarea name="transli" id="transli" class="form-control" rows="4" maxlength="300"><?php echo $b['merek_pengucapan']; ?></textarea>
+                          </div>                        
+                        
+                           <div class="form-group">
+                            <label class="control-label">Unsur warna dalam merek:</label><br>
+                            <small class="text-note"><i class="fa fa-info-circle"></i> maksimal 300 karakter.</small>
+                            <textarea name="unsurwarna" id="unsurwarna" class="form-control" rows="4" maxlength="300"><?php echo $b['merek_unsurwarna']; ?></textarea>
+                          </div> 
+
+                     </div>
+                    
+                    <div class="col-md-6 pr-md-5">
+                        <div class="form-group">
+                            <label class="control-label">Gambar Label Merek</label>
+                            <div><small class="text-note font-12">*Max Size 1MB. &nbsp;Format file .png/.jpg/.jpeg.</small></div>
+
+                            <div class="fileupload fileupload-new file_photo_perusahaan_feed" data-provides="fileupload">
+                            <div class="fileupload-new thumbnail">
+                            <?php if ($b['merek_gambarmerek'] == "") { ?>
+                            <img src="<?php echo base_url();?>assets/images/no-images.png" alt="" class="img-fluid img-circle" style="max-height: 115px;"/>
+                            <?php } else { ?>
+                            <img src="<?php echo base_url();?>assets/images/<?php echo $b['merek_gambarmerek']; ?>" alt="" class="img-fluid" style="max-height: 105px;"/><?php }; ?>
+                            </div>
+                            <div class="fileupload-preview fileupload-exists thumbnail" style="width: auto; max-height: 100px;"></div>
+                            <div>
+                            <span class="btn btn-sm btn-info btn-file">
+                            <span class="fileupload-new"><i class="fa fa-picture-o"></i> Pilih Gambar</span>
+                            <span class="fileupload-exists"><i class="fa fa-picture-o"></i> Ganti</span>
+                            <input type="file" name="gambarlabel" id="gambarlabel">
+                            <input type="hidden" name="gambarlabel_old" value="<?php echo $b['merek_gambarmerek']; ?>">
+                            </span>
+                            <a href="#" class="btn btn-sm btn-danger fileupload-exists" data-dismiss="fileupload">
+                            <i class="fa fa-trash-o"></i> Hapus
+                            </a>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label class="control-label">Gambar Label Merek</label>
+                            <input type="file" name="filefoto" class="dropify2" data-height="230" data-default-file="<?php echo base_url().'assets/images/'.$b['merek_gambarmerek'];?>">
+                            <small class="text-note"><i class="fa fa-info-circle"></i> Max Size 1.5 Mb. &nbsp;Format file .png/.jpg/.jpeg.</small>
+                        </div> -->
+
+                         <div class="form-group">
+                            <label class="control-label">Nama Merek:</label>
+                                <input type="text" name="mereknama" id="mereknama" value="<?php echo $b['merek_namamerek']; ?>" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Deskripsi Merek:</label><br>
+                            <small class="text-note"><i class="fa fa-info-circle"></i> maksimal 300 karakter.</small>
+                            <textarea name="deskmerek" id="deskmerek" class="form-control" rows="4" maxlength="300"><?php echo $b['merek_deskripsi']; ?></textarea>
+                        </div>
+
+                         <div class="form-group">
+                            <label class="control-label">Kelas Barang dan Jasa:</label><br>
+                            <small class="text-note"><i class="fa fa-info-circle"></i> (Masukkan Kata Kunci untuk mempermudah pencarian, contoh: "kelas 1", "barang...")</small>
+                            <textarea name="kelas" id="kelas" class="form-control" rows="9" maxlength="600"><?php echo $b['merek_kelas']; ?></textarea>
+                        </div>
+                       
+                        
+
+
+                   </div>
+
+
+                </div> <!-- End div row -->
+
+                 <div class="row">
+                        <div class="col-md-12 mt-3">
+                            <input type="hidden" name="kode" value="<?php echo $b['merek_id']; ?>" required>
+                            <a href="<?php echo base_url()."admin/merek/viewmerek4/".$b['merek_id'];?>" class="btn btn-danger">Kembali</a>
+                            <button type="submit" class="btn btn-danger">Lanjut</button>
+                        </div>
+                    </div>
+            </div> <!-- End div card-body -->    
+            
+            
+            </div> <!-- End div col-md-12 -->
+            
+
+
+            </div> <!-- End div class block -->
+            
+<!-----------------------------------------END FORM SECTION 1----------------------------------------->
+
+
+            </form>
+            </div> <!-- End div class conten -->
+           
+                <!-- END Page Content -->
+            </main>
+            <!-- END Main Container -->
+            <!-- Footer -->
+            <footer id="page-footer" class="opacity-0">
+                <div class="content py-20 font-size-xs clearfix">
+                    <div class="float-right">
+                        Created with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="http://vr.com" target="_blank">VR</a>
+                    </div>
+                    <div class="float-left">
+                        <a class="font-w600" href="https://vr.com" target="_blank">VR</a> &copy; <span class="js-year-copy"><?php echo date('Y');?></span>
+                    </div>
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+
+
+
+        <!-- Codebase Core JS -->
+        <script src="<?php echo base_url().'assets/js/core/jquery.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/core/popper.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/core/bootstrap.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/core/jquery.slimscroll.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/core/jquery.scrollLock.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/core/jquery.appear.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/core/jquery.countTo.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/core/js.cookie.min.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/codebase.js'?>"></script>
+        <script src="<?php echo base_url().'assets/ckeditor/ckeditor.js'?>"></script>
+        <script src="<?php echo base_url().'assets/js/dropify.min.js'?>"></script>
+
+        <!-- bootstrap datepicker -->
+        <script src="<?php echo base_url();?>assets/front/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+        
+    
+        <script src="<?php echo base_url();?>assets/front/vendors/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+
+        
+        <script src="<?php echo base_url().'assets/js/jquery-ui.js'?>" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $( "#kelas" ).autocomplete({
+                  //url: "<?php echo base_url('admin/merek/get_autocomplete'); ?>"
+                  source: "<?php echo site_url('admin/merek/get_autocomplete/?');?>"
+                });
+            });
+        </script>
+ 
+        
+       <script type="text/javascript">
+    $(document).ready(function() {
+
+        $("input[name='ijin_usaha']").click(function() {
+            if ($(this).val() == "1") {
+                $('#group_ijin').show();
+            } else {
+                $('#group_ijin').hide();
+            }
+        });
+
+        $("input[name='ijin_edar']").click(function() {
+            if ($(this).val() == "1") {
+                $('#group_edar').show();
+            } else {
+                $('#group_edar').hide();
+            }
+        });
+
+        if($('#th_akte_perusahaan').length) {
+            var date = new Date();
+            var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+            $('#th_akte_perusahaan').datepicker({
+                format: "yyyy-mm-dd",
+                todayHighlight: true,
+                autoclose: true
+            });
+        }
+
+        if($('#tgl_ijin_usaha').length) {
+            var date = new Date();
+            var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+            $('#tgl_ijin_usaha').datepicker({
+                format: "yyyy-mm-dd",
+                todayHighlight: true,
+                autoclose: true
+            });
+        }
+
+        if($('#tgl_ijin_edar').length) {
+            var date = new Date();
+            var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+            $('#tgl_ijin_edar').datepicker({
+                format: "yyyy-mm-dd",
+                todayHighlight: true,
+                autoclose: true
+            });
+        }
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000
+        })
+
+        $.validator.addMethod('filesize', function(value, element, param) {
+            return this.optional(element) || (element.files[0].size <= param) 
+        });
+        $("#form-edit-data").validate({
+            rules: {
+                nama_perusahaan: {
+                    required: true
+                },
+                id_kategori_perusahaan: {
+                    required: true
+                },
+                email_perusahaan: {
+                    email: true,
+                    required: true
+                },
+                ijin_usaha: {
+                    required: true
+                },
+                ijin_edar: {
+                    required: true
+                },
+                th_akte_perusahaan:{
+                    required: true
+                },
+                file_photo_perusahaan: {
+                    accept: "jpg|jpeg|png",
+                    filesize: 1000000
+                },
+                file_nib: {
+                    accept: "pdf",
+                    filesize: 1000000
+                },
+                file_iumk: {
+                    accept: "pdf",
+                    filesize: 1000000
+                },
+                file_iui: {
+                    accept: "pdf",
+                    filesize: 1000000
+                },
+                file_pirt: {
+                    accept: "pdf",
+                    filesize: 1000000
+                },
+                file_md: {
+                    accept: "pdf",
+                    filesize: 1000000
+                },
+            },
+            messages: {
+                nama_perusahaan: {
+                    required: "Nama perusahaan harus diisi."
+                },
+                id_kategori_perusahaan: {
+                    required: "Kategori perusahaan harus dipilih."
+                },
+                email_perusahaan: {
+                    email: "Mohon masukan alamat email yg benar",
+                    required: "Email perusahaan harus diisi."
+                },
+                ijin_usaha: {
+                    required: "Silahkan pilih salah satu."
+                },
+                ijin_edar: {
+                    required: "Silahkan pilih salah satu."
+                },
+                th_akte_perusahaan: {
+                    required: "Tanggal perusahaan berdiri harus diisi."
+                },
+                file_photo_perusahaan: {
+                    accept: "Silahkan unggah foto dengan format .PNG/.JPG/.JPEG",
+                    filesize: "Foto maksimal 1 Mbps."
+                },
+                file_nib: {
+                    accept: "Silahkan unggah file dengan format .PDF",
+                    filesize: "File maksimal 1 Mbps."
+                },
+                file_iumk: {
+                    accept: "Silahkan unggah file dengan format .PDF",
+                    filesize: "File maksimal 1 Mbps."
+                },
+                file_iui: {
+                    accept: "Silahkan unggah file dengan format .PDF",
+                    filesize: "File maksimal 1 Mbps."
+                },
+                file_pirt: {
+                    accept: "Silahkan unggah file dengan format .PDF",
+                    filesize: "File maksimal 1 Mbps."
+                },
+                file_md: {
+                    accept: "Silahkan unggah file dengan format .PDF",
+                    filesize: "File maksimal 1 Mbps."
+                },
+            },
+            highlight: function(element, errorClass) {
+                $(element).parent().addClass('has-error text-error')
+                $(element).addClass('has-error text-error')
+            },
+            unhighlight: function(element, errorClass) {
+                $(element).parent().removeClass('has-error text-error')
+                $(element).removeClass('has-error text-error')
+            },
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else if(element.is('input[type=checkbox]') || element.is('input[type=radio]')) {
+                    var controls = element.closest('div[class*="form-group"]');
+                    if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
+                    else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+                    error.addClass('has-error text-error');
+                } else if(element.is('#file_photo_perusahaan')) {
+                    error.insertAfter('.file_photo_perusahaan_feed').addClass('has-error text-error');
+                } else if(element.is('.select2')) {
+                    error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+                } else if(element.is('.chosen-select')) {
+                    error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+        
+
+        // --------------------------- edit data ---------------------------
+            $('#form-edit-data').submit(function(e) {
+                e.preventDefault();
+                if (jQuery("#form-edit-data").valid()) {
+                    $.ajax({
+                        url    : '<?php echo base_url('factsheet/edit_data_perusahaan'); ?>',
+                        method : 'post',
+                        data   : new FormData(this),
+                        dataType    : 'json',
+                        contentType : false,
+                        processData : false,
+                        beforeSend: function() {
+                            $('#loader').show();
+                        },
+                        success:function(response) {
+                            console.log(response);
+                            if(response == 1) {
+                                $('#loader').hide();
+                                top.location.href="<?php echo base_url();?>factsheet/data_produk";
+                            }
+                            else {
+                                $('#loader').hide();
+                                Toast.fire({ type: 'error', title: 'Gagal menyimpan data.' });
+                            }
+                        }
+                    })
+                }
+            });
+        // --------------------------- end edit data ---------------------------
+    }); 
+</script>
+
+  
+    </body>
+</html>

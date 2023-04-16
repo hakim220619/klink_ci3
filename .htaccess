@@ -1,0 +1,32 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/system.*
+RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?/$1 [L]
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
+# Add to your .htaccess file!
+
+# Rewrite rules to block out some common exploits.
+# If you are experience problems on your site block out the operations listed below
+# attempts to block the most common type of exploit attempts!
+
+# Block out any script trying to set a mosConfig value through the URL.
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\=) [OR]
+
+# Block out any script trying to use base64_encode crap to send via URL.
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+
+# Block out any script that includes a [removed] tag in the URL.
+RewriteCond %{QUERY_STRING} (\<|<).*script.*(\>|>) [NC,OR]
+
+# Block out any script trying to set a PHP GLOBALS variable via URL.
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+
+# Block out any script trying to modify a _REQUEST variable via URL.
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+
+# Block all blocked request to homepage with 403 Forbidden error!
+RewriteRule ^(.*)$ index.php [F,L]
