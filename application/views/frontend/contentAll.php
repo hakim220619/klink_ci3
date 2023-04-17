@@ -156,17 +156,23 @@
 
             <div class="footer-newsletter">
                 <div class="container">
-                    <div class="row top-buffer">
-                        <div class="col-lg-12">
-                            <img src="<?php echo base_url() . '/assets/images/' . $k['image'] . '' ?>" style="border-radius: 4px;max-width: 100%;height: auto;" alt="">
-                        </div>
-                        <p>Dibuat: <?= $k['created_at'] ?></p>
-                        <h1><b><?= $k['title'] ?></b></h1>
-                        <div class="col-lg-12 margin-top">
-                            <p><?= $k['content'] ?></p>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <?php foreach ($kegiatan as $k) { ?>
+                            <div class="col-lg-4" style="padding: 20px;">
+                                <div class="post-box">
+                                    <div class="post-img"><img src="<?php echo base_url() . '/assets/images/' . $k->image . '' ?>" class="img-fluid" alt=""></div>
+                                    <span class="post-date"><?= $k->created_at ?></span>
+                                    <div class="post-title" style="margin-bottom: 0px;">
+                                        <h4><?= $k->title ?></h4>
+                                    </div>
+                                    <p><?= $k->deskripsi ?></p>
 
-                        </div>
-
+                                    <a href="<?php echo site_url('home/content/' . $k->id . ''); ?>" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
 
                 </div>

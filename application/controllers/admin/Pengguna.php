@@ -783,6 +783,14 @@ class Pengguna extends CI_Controller{
             redirect('administrator');
         }
     }
+  public function deleteSlct()
+  {
+    $ids = $this->input->post('pengguna_id');
 
+    $this->db->where_in('pengguna_id', explode(",", $ids));
+    $this->db->delete('pengguna');
+
+    echo json_encode(['success' => "Item Deleted successfully."]);
+  }
 
 }

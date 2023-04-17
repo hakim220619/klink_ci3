@@ -126,7 +126,8 @@
           </li>
           <li class="dropdown"><a href="#"><span>Fasilitasi KI</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="#"><a href="<?php echo site_url('fasilities/hakcipta_new'); ?>"><span>Hak Cipta</span></a>
+              <li class="#"><a href="<?php echo site_url('fasilities/hakcipta_new'); ?>"><span>Hak
+                    Cipta</span></a>
                 <!-- <ul>
                   <li><a href="#">Pengenalan</a></li>
                   <li><a href="#">Undang-Undang</a></li>
@@ -147,7 +148,8 @@
                   <li><a href="#">Syarat dan Prosedur</a></li>
                 </ul> -->
               </li>
-              <li class="#"><a href="<?php echo site_url('fasilities/desain_new'); ?>"><span>Desain Industri</span></a>
+              <li class="#"><a href="<?php echo site_url('fasilities/desain_new'); ?>"><span>Desain
+                    Industri</span></a>
                 <!-- <ul>
                   <li><a href="#">Pengenalan</a></li>
                   <li><a href="#">Undang-Undang</a></li>
@@ -194,7 +196,9 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
           <h1 data-aos="fade-up">Klinik KI Ditjen IKMA</h1><br>
-          <h5 data-aos="fade-up" data-aos-delay="400">Klinik KI Ditjen IKMA adalah unit kerja yang berfungsi melaksanakan pembinaan dan penerapan Kekayaan Inteletual (KI) kepada aparatur pembina IKM dan masyarakat Industri khususnya IKM.</h5>
+          <h5 data-aos="fade-up" data-aos-delay="400">Klinik KI Ditjen IKMA adalah unit kerja yang berfungsi
+            melaksanakan pembinaan dan penerapan Kekayaan Inteletual (KI) kepada aparatur pembina IKM dan
+            masyarakat Industri khususnya IKM.</h5>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
               <a href="<?php echo site_url('administrator'); ?>" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
@@ -224,7 +228,10 @@
               <h3>Definisi</h3>
               <h2>KEKAYAAN INTELEKTUAL</h2>
               <p>
-                Kekayaan Intelektual, disingkat KI adalah hak yang timbul sebagai hasil olah pikir yang menghasilkan suatu produk atau proses yang berguna untuk manusia. Pada intinya KI adalah hak untuk menikmati secara ekonomis dari suatu kreativitas intelektual. Obyek dalam KI adalah karya karya yang timbul atau lahir karena kemampuan intelektual manusia.
+                Kekayaan Intelektual, disingkat KI adalah hak yang timbul sebagai hasil olah pikir yang
+                menghasilkan suatu produk atau proses yang berguna untuk manusia. Pada intinya KI adalah
+                hak untuk menikmati secara ekonomis dari suatu kreativitas intelektual. Obyek dalam KI
+                adalah karya karya yang timbul atau lahir karena kemampuan intelektual manusia.
               </p>
               <div class="text-center text-lg-start">
                 <a href="<?php echo base_url() . '#features' ?>" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
@@ -284,7 +291,9 @@
             <div class="box" data-aos="fade-up" data-aos-delay="200">
               <img src="<?php echo base_url() . 'theme/new/img/hakcipta.png' ?>" class="img-fluid" alt=""><br>
               <h3>Hak Cipta</h3>
-              <p style="font-size: 15px;">Hak Cipta adalah hak eksklusif pencipta yang timbul secara otomatis berdasarkan prinsip deklaratif setelah suatu ciptaan diwujudkan dalam bentuk nyata... </p>
+              <p style="font-size: 15px;">Hak Cipta adalah hak eksklusif pencipta yang timbul secara
+                otomatis berdasarkan prinsip deklaratif setelah suatu ciptaan diwujudkan dalam bentuk
+                nyata... </p>
               <a href="<?php echo site_url('fasilities/hakcipta_new'); ?>" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Read More</span>
                 <i class="bi bi-arrow-right"></i>
@@ -296,7 +305,8 @@
             <div class="box" data-aos="fade-up" data-aos-delay="200">
               <img src="<?php echo base_url() . 'theme/new/img/paten.png' ?>" class="img-fluid" alt="">
               <h3>Paten</h3>
-              <p style="font-size: 15px;">Paten adalah hak eksklusif yang diberikan oleh Negara kepada Inventor atas hasil Invensinya dibidang teknologi, untuk jangka waktu tertentu ...</p>
+              <p style="font-size: 15px;">Paten adalah hak eksklusif yang diberikan oleh Negara kepada
+                Inventor atas hasil Invensinya dibidang teknologi, untuk jangka waktu tertentu ...</p>
               <a href="<?php echo site_url('fasilities/paten_new'); ?>" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Read More</span>
                 <i class="bi bi-arrow-right"></i>
@@ -308,7 +318,9 @@
             <div class="box" data-aos="fade-up" data-aos-delay="400">
               <img src="<?php echo base_url() . 'theme/new/img/merek.png' ?>" class="img-fluid" alt="">
               <h3>Merek</h3>
-              <p style="font-size: 15px;">Merek adalah tanda yang dapat ditampilkan secara grafis berupa gambar, logo, nama, kata, huruf, angka, susunan warna dalam bentuk 2 (dua) dimensi dan/atau 3 (tiga) dimensi ...</p>
+              <p style="font-size: 15px;">Merek adalah tanda yang dapat ditampilkan secara grafis berupa
+                gambar, logo, nama, kata, huruf, angka, susunan warna dalam bentuk 2 (dua) dimensi
+                dan/atau 3 (tiga) dimensi ...</p>
               <a href="<?php echo site_url('fasilities/merek_new'); ?>" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Read More</span>
                 <i class="bi bi-arrow-right"></i>
@@ -320,7 +332,8 @@
             <div class="box" data-aos="fade-up" data-aos-delay="600">
               <img src="<?php echo base_url() . 'theme/new/img/desainindustri.png' ?>" class="img-fluid" alt="">
               <h3>Desain Industri</h3>
-              <p style="font-size: 15px;">Desain Industri adalah suatu kreasi tentang bentuk, konfigurasi atau komposisi garis atau warna, atau garis dan warna, atau gabungan... </p>
+              <p style="font-size: 15px;">Desain Industri adalah suatu kreasi tentang bentuk, konfigurasi
+                atau komposisi garis atau warna, atau garis dan warna, atau gabungan... </p>
               <a href="<?php echo site_url('fasilities/desain_new'); ?>" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Read More</span>
                 <i class="bi bi-arrow-right"></i>
@@ -430,23 +443,36 @@
               <div class="tab-pane fade show active" id="tab1">
                 <div class="d-flex align-items mb-2">
                   <i class="bi bi-check2"></i>
-                  <p style="text-align: justify;font-size: 15px;">Meningkatnya jumlah pengusaha industri kecil dan menengah yang memperoleh pelayanan dari Klinik KI IKM.</p>
+                  <p style="text-align: justify;font-size: 15px;">Meningkatnya jumlah pengusaha
+                    industri kecil dan menengah yang memperoleh pelayanan dari Klinik KI IKM.</p>
                 </div>
                 <div class="d-flex align-items mb-2">
                   <i class="bi bi-check2"></i>
-                  <p style="text-align: justify;font-size: 15px;">Meningkatnya kesadaran para pengusaha industri kecil menengah untuk memanfaatkan layanan pendaftaran subyek-subyek KI.</p>
+                  <p style="text-align: justify;font-size: 15px;">Meningkatnya kesadaran para
+                    pengusaha industri kecil menengah untuk memanfaatkan layanan pendaftaran
+                    subyek-subyek KI.</p>
                 </div>
                 <div class="d-flex align-items mb-2">
                   <i class="bi bi-check2"></i>
-                  <p style="text-align: justify;font-size: 15px;">Terciptanya kesamaan persepsi antara para pengusaha industri kecil menengah dan aparat pembina.</p>
+                  <p style="text-align: justify;font-size: 15px;">Terciptanya kesamaan persepsi antara
+                    para pengusaha industri kecil menengah dan aparat pembina.</p>
                 </div>
                 <div class="d-flex align-items mb-2">
                   <i class="bi bi-check2"></i>
-                  <p style="text-align: justify;font-size: 15px;">Meningkatkan jumlah dan kemampuan fasilitator KI.</p>
+                  <p style="text-align: justify;font-size: 15px;">Meningkatkan jumlah dan kemampuan
+                    fasilitator KI.</p>
                 </div>
               </div><!-- End Tab 1 Content -->
               <div class="tab-pane fade show" id="tab2">
-                <p style="text-align: justify;font-size: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalam rangka mengoptimalkan KI di masyarakat industri kecil dan menengah, Direktorat Jenderal Industri Kecil, Menengah dan Aneka (Ditjen IKMA) Kementerian Perindustrian terus memacu program pembinaan dan pengembangan KI dengan membentuk "Klinik KI-IKM" yang bertujuan memberikan pengetahuan dan pemahaman tentang perlindungan terhadap karya-karya intelektual, yaitu: Paten, Merk, Indikasi Geografis, Cipta, Desain Industri, Rahasia Dagang dan Desain Tata Letak Sirkuit Terpadu melalui pelatihan, bimbingan dan konsultasi, advokasi, layanan pendaftaran serta promosi dan informasi.</p>
+                <p style="text-align: justify;font-size: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dalam
+                  rangka mengoptimalkan KI di masyarakat industri kecil dan menengah, Direktorat
+                  Jenderal Industri Kecil, Menengah dan Aneka (Ditjen IKMA) Kementerian Perindustrian
+                  terus memacu program pembinaan dan pengembangan KI dengan membentuk "Klinik KI-IKM"
+                  yang bertujuan memberikan pengetahuan dan pemahaman tentang perlindungan terhadap
+                  karya-karya intelektual, yaitu: Paten, Merk, Indikasi Geografis, Cipta, Desain
+                  Industri, Rahasia Dagang dan Desain Tata Letak Sirkuit Terpadu melalui pelatihan,
+                  bimbingan dan konsultasi, advokasi, layanan pendaftaran serta promosi dan informasi.
+                </p>
 
               </div><!-- End Tab 2 Content -->
 
@@ -511,12 +537,17 @@
                   <div class="accordion-body">
 
                     <div>
-                      <p align="justify">Dalam pelaksanaan kegiatan, Klinik KI-IKM memberikan layanan berupa bimbingan dan konsultasi terkait KI, diantaranya:</p>
+                      <p align="justify">Dalam pelaksanaan kegiatan, Klinik KI-IKM memberikan
+                        layanan berupa bimbingan dan konsultasi terkait KI, diantaranya:</p>
                     </div>
                     <div>
                       <ol type='1'>
                         <li>
-                          <p align="justify">Klinik KI-IKM memberikan kesempatan kepada aparat, pengusaha IKM dan masyarakat luas untuk mendapatkan pelayanan bimbingan dan konsultasi baik secara langsung maupun tidak langsung melalui telepon, e-mail dan surat menyurat dengan Tim Klinik KI-IKM, menyangkut :</p>
+                          <p align="justify">Klinik KI-IKM memberikan kesempatan kepada
+                            aparat, pengusaha IKM dan masyarakat luas untuk mendapatkan
+                            pelayanan bimbingan dan konsultasi baik secara langsung maupun
+                            tidak langsung melalui telepon, e-mail dan surat menyurat dengan
+                            Tim Klinik KI-IKM, menyangkut :</p>
                         </li>
                       </ol>
                     </div>
@@ -529,28 +560,37 @@
                           <p align="justify">Pemecahan masalah pelindungan terhadap KI;</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Penyelesaian kelengkapan dokumen dalam rangka pendaftaran KI.
+                          <p align="justify">Penyelesaian kelengkapan dokumen dalam rangka
+                            pendaftaran KI.
                           </p>
                         </li>
                       </ol>
                     </div>
 
                     <div style="margin-left: 30px">
-                      <p align="justify">Untuk mendapatkan layanan bimbingan dan konsultasi, dapat dilakukan sebagai berikut:</p>
+                      <p align="justify">Untuk mendapatkan layanan bimbingan dan konsultasi, dapat
+                        dilakukan sebagai berikut:</p>
                     </div>
                     <div style="margin-left: 25px">
                       <ol type='a'>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Menghubungi kantor sekretariat Klinik KI-IKM melalui telepon, website, surat menyurat dan e-mail pada setiap hari kerja. </p>
+                          <p align="justify">Menghubungi kantor sekretariat Klinik KI-IKM
+                            melalui telepon, website, surat menyurat dan e-mail pada setiap
+                            hari kerja. </p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Mendatangi kantor sekretariat Klinik KI-IKM untuk melakukan konsultasi langsung dengan Tim Klinik KI-IKM.</p>
+                          <p align="justify">Mendatangi kantor sekretariat Klinik KI-IKM untuk
+                            melakukan konsultasi langsung dengan Tim Klinik KI-IKM.</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Untuk memperlancar jalannya konsultasi, pengusaha IKM atau masyarakat lainnya terlebih dahulu agar mempersiapkan pokok-pokok materi KI yang akan dikonsultasikan.</p>
+                          <p align="justify">Untuk memperlancar jalannya konsultasi, pengusaha
+                            IKM atau masyarakat lainnya terlebih dahulu agar mempersiapkan
+                            pokok-pokok materi KI yang akan dikonsultasikan.</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Pelaksanaan konsultasi dilakukan pada setiap hari kerja, yakni Hari Senin s/d Jum’at mulai pukul 08.00 s/d 16.00 WIB.
+                          <p align="justify">Pelaksanaan konsultasi dilakukan pada setiap hari
+                            kerja, yakni Hari Senin s/d Jum’at mulai pukul 08.00 s/d 16.00
+                            WIB.
                           </p>
                         </li>
                       </ol>
@@ -559,7 +599,14 @@
                     <div>
                       <ol start="2">
                         <li>
-                          <p align="justify">Klinik KI-IKM menyediakan bantuan fasilitator dan tenaga ahli untuk memberikan bimbingan dan konsultasi bagi IKM dan masyarakat lain yang membutuhkan yang menyangkut Kekayaan Intelektual. untuk mendapatkan layanan dimaksud, dapat dilakukan sebagai berikut menyampaikan permohonan secara tertulis kepada Sekretaris Direktorat Jenderal, tembusan kepada Direktur Jenderal IKMA dengan mencantumkan identitas, alamat dan telepon/ faximile yang bersangkutan.</p>
+                          <p align="justify">Klinik KI-IKM menyediakan bantuan fasilitator dan
+                            tenaga ahli untuk memberikan bimbingan dan konsultasi bagi IKM
+                            dan masyarakat lain yang membutuhkan yang menyangkut Kekayaan
+                            Intelektual. untuk mendapatkan layanan dimaksud, dapat dilakukan
+                            sebagai berikut menyampaikan permohonan secara tertulis kepada
+                            Sekretaris Direktorat Jenderal, tembusan kepada Direktur
+                            Jenderal IKMA dengan mencantumkan identitas, alamat dan telepon/
+                            faximile yang bersangkutan.</p>
                         </li>
                       </ol>
                     </div>
@@ -567,7 +614,12 @@
                     <div>
                       <ol start="3">
                         <li>
-                          <p align="justify">Klinik KI-IKM menyediakan layanan penyelenggaraan bimbingan teknis di bidang KI meliputi pelatihan fasilitator KI tingkat pemula, pelatihan fasilitator KI tingkat lanjutan dan sosialisasi KI tingkat lanjutan dan sosialisasi KI. Untuk mendapatkan layanan tersebut, dapat dilakukan sebagai berikut :</p>
+                          <p align="justify">Klinik KI-IKM menyediakan layanan penyelenggaraan
+                            bimbingan teknis di bidang KI meliputi pelatihan fasilitator KI
+                            tingkat pemula, pelatihan fasilitator KI tingkat lanjutan dan
+                            sosialisasi KI tingkat lanjutan dan sosialisasi KI. Untuk
+                            mendapatkan layanan tersebut, dapat dilakukan sebagai berikut :
+                          </p>
                         </li>
                       </ol>
                     </div>
@@ -575,10 +627,16 @@
                     <div style="margin-left: 25px">
                       <ol type='a'>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Menyampaikan permohonan secara tertulis kepada Sekretaris Direktorat Jenderal, tembusan kepada Direktur Jenderal IKMA dengan mencantumkan identitas, alamat dan telepon/ faximile yang bersangkutan.</p>
+                          <p align="justify">Menyampaikan permohonan secara tertulis kepada
+                            Sekretaris Direktorat Jenderal, tembusan kepada Direktur
+                            Jenderal IKMA dengan mencantumkan identitas, alamat dan telepon/
+                            faximile yang bersangkutan.</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Pelaksanaan pelatihan akan diselenggarakan apabila jumlah peserta pelatihan minimal 20 orang dan maksimal 30 orang dan tersedianya ruangan yang cukup layak untuk kebutuhan proses belajar.</p>
+                          <p align="justify">Pelaksanaan pelatihan akan diselenggarakan
+                            apabila jumlah peserta pelatihan minimal 20 orang dan maksimal
+                            30 orang dan tersedianya ruangan yang cukup layak untuk
+                            kebutuhan proses belajar.</p>
                         </li>
                       </ol>
                     </div>
@@ -595,7 +653,9 @@
                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
                     <div>
-                      <p align="justify">Klinik KI-IKM memberikan fasilitasi layanan konsultasi kepada IKM dalam rangka membantu/ memberikan saran penyelesaian kasus/ permasalahan di bidang KI, menyangkut :</p>
+                      <p align="justify">Klinik KI-IKM memberikan fasilitasi layanan konsultasi
+                        kepada IKM dalam rangka membantu/ memberikan saran penyelesaian kasus/
+                        permasalahan di bidang KI, menyangkut :</p>
                     </div>
                     <div>
                       <ol type='1'>
@@ -626,8 +686,12 @@
                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
                     <div>
-                      <p align="justify">Klinik KI-IKM melakukan kerja sama kelembagaan dengan instansi terkait dan stakeholder lainnya di bidang KI, misalnya dengan Direktorat Jenderal Kekayaan Intelektual Kementerian Hukum dan HAM, Balai Besar, Perguruan Tinggi, dan
-                        Pemerintah Daerah. Bentuk kerja sama yang dapat dilakukan antara Klinik KI-IKM dengan Kementerian Hukum dan HAM antara lain :</p>
+                      <p align="justify">Klinik KI-IKM melakukan kerja sama kelembagaan dengan
+                        instansi terkait dan stakeholder lainnya di bidang KI, misalnya dengan
+                        Direktorat Jenderal Kekayaan Intelektual Kementerian Hukum dan HAM,
+                        Balai Besar, Perguruan Tinggi, dan
+                        Pemerintah Daerah. Bentuk kerja sama yang dapat dilakukan antara Klinik
+                        KI-IKM dengan Kementerian Hukum dan HAM antara lain :</p>
                     </div>
                     <div>
                       <ol type='1'>
@@ -643,7 +707,9 @@
                       </ol>
                     </div>
                     <div>
-                      <p align="justify">Bentuk kerja sama yang dapat dilakukan antara Klinik KI-IKM dengan Dinas yang membawahi sector industry di daerah antara lain :</p>
+                      <p align="justify">Bentuk kerja sama yang dapat dilakukan antara Klinik
+                        KI-IKM dengan Dinas yang membawahi sector industry di daerah antara lain
+                        :</p>
                     </div>
                     <div>
                       <ol type='1'>
@@ -651,17 +717,21 @@
                           <p align="justify">Penyediaan peserta pelatihan fasilitator KI;</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Pengiriman fasilitator dan tenaga ahli KI ke daerah;</p>
+                          <p align="justify">Pengiriman fasilitator dan tenaga ahli KI ke
+                            daerah;</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
                           <p align="justify">Koordinasi fasilitasi KI ke daerah;</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Koordinasi terkait pelanggaran KI oleh IKM (Kepolisisan, Kejaksaan); dan</p>
+                          <p align="justify">Koordinasi terkait pelanggaran KI oleh IKM
+                            (Kepolisisan, Kejaksaan); dan</p>
                         </li>
                         <li style="padding-left: 10px;position: relative;">
-                          <p align="justify">Koordinasi bidang paten hasil invensi IKM terkait penulisan deskripsi paten
-                            (Balai Besar, Baristand/ PM KI, Kemenristek, LIPI, Perguruan Tinggi).</p>
+                          <p align="justify">Koordinasi bidang paten hasil invensi IKM terkait
+                            penulisan deskripsi paten
+                            (Balai Besar, Baristand/ PM KI, Kemenristek, LIPI, Perguruan
+                            Tinggi).</p>
                         </li>
                       </ol>
 
@@ -685,7 +755,11 @@
                         </ol>
                       </div>
                       <div>
-                        <p style="margin-left: 30px" align="justify">Klinik KI-IKM memberikan layanan dan pemberian informasi tentang KI pada IKM dan masyarakat luas dengan turut berpartisipasi dalam berbagai event pameran di dalam negeri termasuk memberikan fasilitas ruang pamer di stand Klinik KI-IKM bagi produk industri yang telah terdaftar KI-nya.</p>
+                        <p style="margin-left: 30px" align="justify">Klinik KI-IKM memberikan
+                          layanan dan pemberian informasi tentang KI pada IKM dan masyarakat
+                          luas dengan turut berpartisipasi dalam berbagai event pameran di
+                          dalam negeri termasuk memberikan fasilitas ruang pamer di stand
+                          Klinik KI-IKM bagi produk industri yang telah terdaftar KI-nya.</p>
                       </div>
                       <div>
                         <ol start="2">
@@ -695,7 +769,8 @@
                         </ol>
                       </div>
                       <div>
-                        <p style="margin-left: 30px" align="justify">Klinik KI-IKM memberikan berbagai informasi di bidang KI berupa penyebarluasan :</p>
+                        <p style="margin-left: 30px" align="justify">Klinik KI-IKM memberikan
+                          berbagai informasi di bidang KI berupa penyebarluasan :</p>
                       </div>
                       <div style="margin-left: 25px">
                         <ol type='a'>
@@ -711,7 +786,11 @@
                         </ol>
                       </div>
                       <div>
-                        <p style="margin-left: 30px" align="justify">Perolehan layanan informasi ini dapat dilakukan dengan mendatangi kantor sekretariat Klinik KI-IKM dengan membawa identitas diri dan tidak dikenakan biaya sepanjang jenis informasi yang dibutuhkan tersedia di Klinik KI-IKM.</p>
+                        <p style="margin-left: 30px" align="justify">Perolehan layanan informasi
+                          ini dapat dilakukan dengan mendatangi kantor sekretariat Klinik
+                          KI-IKM dengan membawa identitas diri dan tidak dikenakan biaya
+                          sepanjang jenis informasi yang dibutuhkan tersedia di Klinik KI-IKM.
+                        </p>
                       </div>
 
                     </div>
@@ -726,7 +805,8 @@
                   </h2>
                   <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                     <div class="accordion-body">
-                      Klinik KI-IKM memberikan fasilitasi kepada IKM berupa permohonan pendaftaran di bidang KI yaitu Cipta, Paten, Merek dan Desain Industri.
+                      Klinik KI-IKM memberikan fasilitasi kepada IKM berupa permohonan pendaftaran
+                      di bidang KI yaitu Cipta, Paten, Merek dan Desain Industri.
                     </div>
                   </div>
                 </div>
@@ -865,7 +945,7 @@
         </div>
 
       </div>
-
+      <a href="<?php echo site_url('home/contentAll'); ?>" style="margin-left: 48%;">Read more..</a>
     </section><!-- End Recent Blog Posts Section -->
 
 
@@ -924,7 +1004,8 @@
                   </div>
             </form>
           </div>
-          <div id="contact-content" style="text-align: center;"><?php echo $this->session->flashdata('msg'); ?></div>
+          <div id="contact-content" style="text-align: center;">
+            <?php echo $this->session->flashdata('msg'); ?></div>
         </div>
       </div>
 
@@ -937,7 +1018,8 @@
             <div class="info-box">
               <i class="bi bi-geo-alt"></i>
               <h3>Alamat</h3>
-              <p>Jl. Jenderal Gatot Subroto,<br>Kav. 52-53 Lantai 15,<br>Kuningan Timur, Jakarta Selatan 12950</p>
+              <p>Jl. Jenderal Gatot Subroto,<br>Kav. 52-53 Lantai 15,<br>Kuningan Timur, Jakarta Selatan
+                12950</p>
             </div>
           </div>
 

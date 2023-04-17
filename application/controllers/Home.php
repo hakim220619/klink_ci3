@@ -31,8 +31,13 @@ class Home extends CI_Controller
 		$x['k'] = $this->db->query('select * from kegiatan where id = ' . $id . '')->row_array();
 		$this->load->view('frontend/content', $x);
 		//$this->load->view('frontend/home_view',$x);
+	}
+	public function contentAll()
+	{
 
-
+		$x['kegiatan'] = $this->db->query('select * from kegiatan')->result();
+		$this->load->view('frontend/contentAll', $x);
+		//$this->load->view('frontend/home_view',$x);
 	}
 
 	function fetch_data()
