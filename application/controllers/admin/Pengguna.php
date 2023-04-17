@@ -785,8 +785,8 @@ class Pengguna extends CI_Controller{
     }
   public function deleteSlct()
   {
-    $ids = $this->input->post('pengguna_id');
-
+    $ids = $this->input->post('ids');
+    // var_dump($ids);
     $this->db->where_in('pengguna_id', explode(",", $ids));
     $this->db->delete('pengguna');
 
