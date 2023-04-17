@@ -187,14 +187,6 @@
                                                     <!-- <a class="btn btn-sm btn-secondary btn-circle" href="<?php echo site_url('admin/pengguna/reset_password/' . $row->pengguna_id); ?>"><span class="fa fa-refresh"></span></a>
                                                     <a href="javascript:void(0);" class="btn btn-sm btn-secondary btn-circle btn-hapus" data-id="<?php echo $row->pengguna_id; ?>"><span class="fa fa-trash"></span></a> -->
                                                 </td>
-
-
-
-
-
-
-
-
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>
